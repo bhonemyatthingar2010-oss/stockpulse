@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  // Required when hosting at https://<user>.github.io/stockpulse/
+  base: "/stockpulse/",
   plugins: [
     {
       name: "normalize-windows-paths",
