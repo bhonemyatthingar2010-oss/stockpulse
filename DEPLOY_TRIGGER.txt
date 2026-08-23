@@ -1,5 +1,5 @@
-Trigger Vercel redeploy
+Trigger Vercel redeploy (2)
 
-This file was added automatically to trigger a redeploy on Vercel after the user requested an immediate production rebuild.
+Updating timestamp to force Vercel to pick up a new commit and rebuild production.
 
-Timestamp: 2026-08-23T14:24:00Z
+Timestamp: 2026-08-23T14:33:00Z
