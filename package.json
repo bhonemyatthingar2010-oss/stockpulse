@@ -18,7 +18,8 @@
     "uuid": "^9.0.0",
     "tailwindcss": "^4.2.0",
     "postcss": "^8.4.24",
-    "autoprefixer": "^10.4.14"
+    "autoprefixer": "^10.4.14",
+    "@tailwindcss/postcss": "^1.1.0"
   },
   "devDependencies": {
     "typescript": "^5.5.0",
