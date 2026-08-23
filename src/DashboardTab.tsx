@@ -1,5 +1,5 @@
 import React from 'react';
-import { useInventoryStore } from './useinventorystore';
+import { useInventoryStore } from './useInventoryStore';
 import { TrendingUp, PackageMinus, DollarSign } from 'lucide-react';
 
 export function DashboardTab() {
