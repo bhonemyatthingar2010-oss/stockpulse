@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for glassmorphism & ambient glows */
+:root {
+  --glass-bg: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.08);
+  --accent: linear-gradient(90deg,#7c3aed,#06b6d4);
+}
+
+html.dark {
+  --glass-bg: rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.06);
+}
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 6px 30px rgba(12,12,16,0.45);
+  border-radius: 1rem;
+}
+
+.card {
+  @apply p-6 rounded-2xl glass;
+}
+
+.pulse-accent {
+  box-shadow: 0 10px 40px rgba(99,102,241,0.12);
+}
