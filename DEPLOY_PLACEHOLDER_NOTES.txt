@@ -1,0 +1,5 @@
+Trigger Vercel redeploy: placeholder deployed
+
+This commit replaces the React app entry with a temporary static placeholder so production is immediately available while runtime build issues are fixed.
+
+Do not keep this file if you prefer the React app to run; it was added at the user's request as an emergency stop-gap.
