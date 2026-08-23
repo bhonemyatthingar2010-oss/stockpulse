@@ -1,32 +1,42 @@
-export interface InventoryItem {
+export type PriceTier = "retail" | "wholesale" | "vip";
+
+export type UnitDefinition = {
+  id: string;
+  name: string; // e.g., "Bag", "Half-Bag", "kg"
+  multiplier: number; // how many base units (kg) this unit equals
+};
+
+export type InventoryItem = {
   id: string;
   name: string;
   category: string;
-  baseUnit: string;
-  stockInBaseUnit: number;
-  costPerBaseUnit: number;
-  conversionRates: Record<string, number>;
-  tierPrices: Record<string, Record<string, number>>;
-}
+  baseUnit: string; // e.g., "kg"
+  baseQuantity: number; // quantity in baseUnit (kg)
+  units: UnitDefinition[]; // available units with multipliers
+  price: { retail: number; wholesale: number; vip: number }; // price per selected unit (per unit name multiplier applied)
+  costPerBase: number; // cost per base unit (kg)
+  color?: string;
+};
 
-export interface SaleLog {
+export type Sale = {
   id: string;
-  date: string;
   itemId: string;
-  itemName: string;
-  unitSold: string;
-  tierApplied: string;
-  unitPrice: number;
-  quantitySold: number;
-  totalRevenue: number;
-  profit: number;
-  baseQtyDeducted: number;
-}
-
-export interface ExpenseLog {
-  id: string;
-  category: string;
-  amount: number;
   date: string;
+  unitName: string;
+  unitMultiplier: number;
+  quantity: number; // in selected unit
+  baseQuantity: number; // quantity converted to base unit
+  priceTier: PriceTier;
+  unitPrice: number; // price per selected unit
+  revenue: number;
+  cost: number;
+  profit: number;
+};
+
+export type Expense = {
+  id: string;
+  date: string;
+  category: string;
   note?: string;
-} 
+  amount: number;
+};
