@@ -1,0 +1,5 @@
+Trigger preview build for fix/full-app
+
+This file was added automatically to trigger a Vercel preview build for the fix/full-app branch as part of automated debugging and rebuild steps.
+
+Timestamp: 2026-08-23T08:45:00Z
