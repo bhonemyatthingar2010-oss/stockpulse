@@ -1,0 +1,5 @@
+Trigger Vercel redeploy
+
+This file was added automatically to trigger a redeploy on Vercel after the user requested an immediate production rebuild.
+
+Timestamp: 2026-08-23T14:24:00Z
